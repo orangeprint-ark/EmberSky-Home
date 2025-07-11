@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projects Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div><h1>orangePrint's Projects Gallery</h1></div>
+    <br />
+    <div class="officialGrid">
+      <div class="grid1">
+        <p>Project Gallery</p>
+        <img src="ProjectAssets/DF93E77A-B942-4A1C-903A-B6FED34A99DD.png">
+      </div>
+      <div class="grid2">
+        <p>Not available yet</p>
+        <img src="ProjectAssets/{DF93E77A-B942-4A1C-903A-B6FED34A99DD}.png">
+      </div>
+    </div>
+    <script src="https://unpkg.com/fengari-web/dist/fengari-web.js"></script>
+    <script>
+      async function runLuaFile(url) {
+        const response = await fetch(url);
+        const luaCode = await response.text();
+        fengari.load(luaCode)();
+      }
+      runLuaFile("main.lua");
+    </script>
+  </body>
+</html>
