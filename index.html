@@ -1,58 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Projects Gallery</title>
+    <meta charset="UTF-8" />
+    <title>OrangeDevSpace Projects</title>
     <link rel="stylesheet" href="styles.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3824557531929269"
-      crossorigin="anonymous"
-    ></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4836734701209541"
-     crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3824557531929269" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4836734701209541" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div><h1>orangePrint's Projects Gallery</h1></div>
-    <br />
-    <div class="officialGrid">
-      <div class="grid1">
+    <header>
+      <h1>🍊 OrangeDevSpace</h1>
+      <p class="tagline">A collection of projects from the orange dimension.</p>
+    </header>
+
+    <main class="officialGrid">
+      <div class="project-card">
         <p>Project Gallery</p>
-        <a href="https://project-gallery-vert.vercel.app/"
-          ><img src="ProjectAssets/DF93E77A-B942-4A1C-903A-B6FED34A99DD.png"
-        /></a>
+        <a href="https://project-gallery-vert.vercel.app/" target="_blank">
+          <img src="ProjectAssets/DF93E77A-B942-4A1C-903A-B6FED34A99DD.png" />
+        </a>
       </div>
-      <div class="grid2">
+
+      <div class="project-card">
         <p>Dc50</p>
-        <a
-          href="https://github.com/orangeprint-ark/Learning-game-dev/releases/download/1.00/Dsc50.zip"
-        >
+        <a href="https://github.com/orangeprint-ark/Learning-game-dev/releases/download/1.00/Dsc50.zip">
           <img src="ProjectAssets/D33CF416-79A9-4809-9DC2-6435721BF4D1.png" />
         </a>
       </div>
-    </div>
-    <div style="position: fixed; bottom: 20px; left: 20px; z-index: 1000">
-      <a
-        href="https://paypal.me/ErikaWolffOPr"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="
-          display: inline-block;
-          background-color: #0070ba;
-          color: white;
-          padding: 10px 18px;
-          border-radius: 6px;
-          font-family: Arial, sans-serif;
-          font-weight: bold;
-          text-decoration: none;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          transition: background-color 0.3s ease;
-        "
-        onmouseover="this.style.backgroundColor='#004c8c'"
-        onmouseout="this.style.backgroundColor='#0070ba'"
-      >
-        Donate with PayPal
+    </main>
+
+    <footer>
+      <a href="https://paypal.me/ErikaWolffOPr" target="_blank" class="donate-btn">
+        💸 Donate with PayPal
       </a>
-    </div>
+    </footer>
+
     <script src="https://unpkg.com/fengari-web/dist/fengari-web.js"></script>
     <script>
       async function runLuaFile(url) {
