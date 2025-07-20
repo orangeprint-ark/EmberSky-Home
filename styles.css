@@ -198,3 +198,93 @@ footer {
     font-size: 1rem;
   }
 }
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(255, 111, 0, 0.15);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 111, 0, 0.25);
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  color: #ff6f00;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ff6f00;
+  border-bottom: 2px solid transparent;
+  transition: border 0.2s;
+}
+
+.project a:hover {
+  border-bottom: 2px solid #ff6f00;
+}
+.learn-more-btn {
+  background-color: #ffffff;
+  border: 2px solid #ff6f00;
+  color: #ff6f00;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 111, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #ff6f00;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 111, 0, 0.3);
+}
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ff6f00;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 111, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.back-btn:hover {
+  background-color: #cc5900;
+  box-shadow: 0 6px 20px rgba(204, 89, 0, 0.4);
+}
