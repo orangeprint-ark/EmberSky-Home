@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EmberWord - EmberSky Advanced</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="docs.svg" type="image/svg+xml" />
+  <script src="https://cdn.jsdelivr.net/npm/docx@7.1.3/build/index.umd.min.js"></script>
+</head>
+<body>
+  <div class="toolbar" role="toolbar" aria-label="Text editor controls">
+    <button onclick="exec('undo')" title="Undo (Ctrl+Z)">↺ Undo</button>
+    <button onclick="exec('redo')" title="Redo (Ctrl+Y)">↻ Redo</button>
+
+    <button onclick="exec('bold')" title="Bold (Ctrl+B)"><b>B</b></button>
+    <button onclick="exec('italic')" title="Italic (Ctrl+I)"><i>I</i></button>
+    <button onclick="exec('underline')" title="Underline (Ctrl+U)"><u>U</u></button>
+
+    <select onchange="exec('fontName', this.value)" title="Font Family" aria-label="Font Family">
+      <option value="Arial" selected>Arial</option>
+      <option value="Calibri">Calibri</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Tahoma">Tahoma</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Verdana">Verdana</option>
+    </select>
+
+    <select onchange="exec('fontSize', this.value)" title="Font Size" aria-label="Font Size">
+      <option value="1">10pt</option>
+      <option value="2">13pt</option>
+      <option value="3" selected>16pt</option>
+      <option value="4">18pt</option>
+      <option value="5">24pt</option>
+      <option value="6">32pt</option>
+      <option value="7">48pt</option>
+    </select>
+
+    <input type="color" onchange="exec('foreColor', this.value)" title="Text Color" aria-label="Text Color" />
+
+    <input type="color" onchange="exec('hiliteColor', this.value)" title="Highlight Color" aria-label="Highlight Color" />
+
+    <button onclick="exec('justifyLeft')" title="Align Left">☰ Left</button>
+    <button onclick="exec('justifyCenter')" title="Align Center">☷ Center</button>
+    <button onclick="exec('justifyRight')" title="Align Right">☰ Right</button>
+    <button onclick="exec('justifyFull')" title="Justify">☰ Justify</button>
+
+    <button onclick="exec('insertUnorderedList')" title="Bullet List">• List</button>
+    <button onclick="exec('insertOrderedList')" title="Numbered List">1. List</button>
+
+    <button onclick="insertImage()" title="Insert Image via URL">🖼️ Image</button>
+    <button onclick="exportDocx()" title="Export as DOCX">💾 Export DOCX</button>
+    <button onclick="clearEditor()" title="Clear Editor">🗑️ Clear</button>
+  </div>
+
+  <div id="editor" contenteditable="true" spellcheck="true" aria-label="Document editor">
+    <h1>Welcome to EmberWord</h1>
+    <p>Start writing your document here...</p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

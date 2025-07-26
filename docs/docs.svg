@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document outline -->
+  <rect x="8" y="6" width="48" height="52" rx="4" ry="4" stroke="#FFDD00" stroke-width="3" fill="black"/>
+  
+  <!-- Folded corner -->
+  <path d="M40 6H56L40 22V6Z" fill="#FFDD00"/>
+
+  <!-- Horizontal lines representing text -->
+  <line x1="16" y1="30" x2="48" y2="30" stroke="#FFDD00" stroke-width="2" stroke-linecap="round"/>
+  <line x1="16" y1="38" x2="48" y2="38" stroke="#FFDD00" stroke-width="2" stroke-linecap="round"/>
+  <line x1="16" y1="46" x2="40" y2="46" stroke="#FFDD00" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- EmberDocs "E" stylized letter -->
+  <path d="M20 18 H36 M20 22 H32 M20 26 H36" stroke="#FFDD00" stroke-width="3" stroke-linecap="round"/>
+</svg>

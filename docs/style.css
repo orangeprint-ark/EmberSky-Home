@@ -1,0 +1,47 @@
+body {
+  margin: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #111; 
+  color: #fff; 
+  user-select: text;
+}
+.toolbar {
+  background: #222; 
+  padding: 10px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px;
+  position: sticky; 
+  top: 0; 
+  z-index: 20;
+}
+button, select, input[type=color] {
+  background: #ffdd00; 
+  color: #000; 
+  border: none; 
+  padding: 6px 10px;
+  font-weight: 700; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  user-select: none;
+  transition: background-color 0.2s;
+}
+button:hover, select:hover, input[type=color]:hover {
+  background: #ffc700;
+}
+#editor {
+  min-height: 85vh; 
+  padding: 20px; 
+  outline: none; 
+  background: #1a1a1a;
+  line-height: 1.6; 
+  margin: 0 10px 20px 10px; 
+  border-radius: 8px;
+  overflow-y: auto;
+}
+label {
+  color: #ffdd00; 
+  font-weight: 600; 
+  margin-left: 10px;
+  user-select: none;
+}
