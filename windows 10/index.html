@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Windows 10 simulator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+  </head>
+  <body>
+    
+<div id="login-screen"></div>
+
+<div class="profile" id="prfl">
+  <img src="general/Profile.png" alt="Profile Icon" class="profile-icon" />
+  <p class="profile-name">Ember Sky</p>
+  <button class="login-button">Sign in</button>
+</div>
+
+    <div id="custom-context-menu" class="context-menu">
+      <div class="context-1">
+        <div class="context-item">Refresh</div>
+        <div class="context-item">Display Settings</div>
+        <div class="context-item">Personalize</div>
+      </div>
+    </div>
+    <div id="boot-screen">
+      <img src="win10-blue.png" alt="Windows 10 Boot Icon" class="boot-icon" />
+      <img src="general/Windows8 loader.gif" alt="Boot Loader" class="boot-loader" />
+    </div>
+    <div id="desktop">
+      <div class="app-edge" id="explorer">
+        <img src="general/explorer.ico" alt="explorer Icon" class="app-icon" />
+        <p class="app-handle">explorer</p>
+      </div>
+    </div>
+
+    <div id="taskbar">
+      <div class="taskbar-items">
+        <div id="taskbar-time"></div>
+    <div id="taskbar-date"></div>
+      <button id="start-button">
+        <div id="winico"></div>
+      </button>
+      <div id="startmenu">
+        <div class="startmenu-items">
+          <div class="startmenu-item">
+            <img
+              src="general/explorer.ico"
+              alt="Explorer Icon"
+              class="startmenu-icon"
+              id="explorer-sm"/>
+            <p>File Explorer</p>
+          </div>
+          <div class="startmenu-item">
+            <img
+              src="general/cmd.ico"
+              alt="Command prompt Icon"
+              class="startmenu-icon"/>
+            <p>Command Prompt</p>
+          </div>
+          <div class="startmenu-item">
+            <img
+              src="general/powershell.ico"
+              alt="Powershell Icon"
+              class="startmenu-icon"/>
+            <p>Powershell</p>
+          </div>
+          <div id="startmenu-utilities">
+          <div id="user">
+            <img
+              src="general/Profile.png"
+              alt="User"
+              style="width:20px ; height: 20px; border-radius: 50%;"
+            />
+          </div>
+          <div id="settingssm">
+            <img
+              src="general/settings.png"
+              alt="Settings Icon"
+              style="width:20px; height: 20px;"
+            />
+          </div>
+          </div>
+      </div>
+        </div>
+        
+      
+    </div>
+
+    <div class="apps-items">
+      <div id="explorer-app" class="app">
+        <div class="window">
+          Explorer
+          <div class="window-minimize" id="explorer-min">-</div>
+          <div class="window-maximize" id="explorer-max">[]</div>
+          <div class="window-x" id="explorer-x">X</div>
+        </div>
+
+        <div class="app-preview" id="explorer-preview">
+          <div id="explorer-leftpanel">
+            <div id="desktopfromtheleftsidebar" class="explorer-leftpanel-item">
+              <img
+                src="general/desktop.ico"
+                alt="Desktop Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">Desktop</p>
+            </div>
+            <div id="My PC" class="explorer-leftpanel-item">
+              <img
+                src="general/thispc.ico"
+                alt="This PC Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">This PC</p>
+            </div>
+            <div id="Documents" class="explorer-leftpanel-item">
+              <img
+                src="general/documents.ico"
+                alt="Documents Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">Documents</p>
+            </div>
+            <div id="Downloads" class="explorer-leftpanel-item">
+              <img
+                src="general/downloads.ico"
+                alt="Downloads Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">Downloads</p>
+            </div>
+            <div id="Pictures" class="explorer-leftpanel-item">
+              <img
+                src="general/pictures.ico"
+                alt="Pictures Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">Pictures</p>
+            </div>
+            <div id="Music" class="explorer-leftpanel-item">
+              <img
+                src="general/music.ico"
+                alt="Music Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">Music</p>
+            </div>
+            <div id="Videos" class="explorer-leftpanel-item">
+              <img
+                src="general/videos.ico"
+                alt="Videos Icon"
+                class="exlpitem"
+              />
+              <p class="explhandle">Videos</p>
+            </div>
+          </div>
+
+          <div id="actual-folder-goddamn">
+            <div id="mypc-preview">
+              <div class="mypc-item" id="localdisk-folder">
+                <img
+                  src="general/disk.ico"
+                  alt="Disk Icon"
+                  class="mypc-icon"
+                />
+                <div class="mypc-content">
+                  <p class="folder-label">Local Disk (C:)</p>
+                  <p class="smallhandleformypcthatiusebecauseimadumbass">
+                    911.28 GB free of 931.32 GB
+                  </p>
+                  <div class="storage-bar">
+                    <div class="storage-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="C-drive-folder">
+              <div class="small-folder-preview">
+                <div class="small-folder-item">
+                  <img
+                    src="general/folderfill.ico"
+                    alt="Folder Icon"
+                    class="small-folder-icon"
+                  />
+                  <p class="small-folder-label">Program Files</p>
+                   <p class="small-folder-description">Application storage</p>
+                    <p class="small-folder-date">Modified: 07/21/2025</p>
+              </div>
+              <div class="small-folder-item">
+              <img
+                src="general/folderfill.ico"
+                alt="Folder Icon"
+                class="small-folder-icon"
+              />
+              <p class="small-folder-label">Users</p>
+               <p class="small-folder-description">Application storage</p>
+  <p class="small-folder-date">Modified: 07/21/2025</p>
+          </div>
+            <div class="small-folder-item">
+              <img
+                src="general/folderfill.ico"
+                alt="Folder Icon"
+                class="small-folder-icon"
+              />
+              <p class="small-folder-label">Windows</p>
+               <p class="small-folder-description">Application storage</p>
+  <p class="small-folder-date">Modified: 07/21/2025</p>
+            </div>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script src="index.js"></script>
+    <script type="text/babel" src="main.jsx"></script>
+  </body>
+</html>
