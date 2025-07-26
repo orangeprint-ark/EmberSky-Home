@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/docs", "destination": "/docs/index.html" },
+    { "source": "/sheets", "destination": "/sheets/index.html" },
+    { "source": "/decks", "destination": "/decks/index.html" },
+    {"source": "/win10", "destination": "/windows10/index.html"}
+  ]
+}
