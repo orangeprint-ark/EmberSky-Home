@@ -1,249 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="ProjectAssets/favicon.svg" type="image/svg+xml" />
-    <title>Virelli Plans</title>
-    <style>
-      .back-btn {
-        display: inline-block;
-        margin-top: 20px;
-        background-color: #00aaff;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: 600;
-        text-decoration: none;
-        box-shadow: 0 4px 15px rgba(0, 170, 255, 0.2);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>💸 Pricing – Virelli</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="ProjectAssets/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+    </ul>
+  </nav>
 
-      .back-btn:hover {
-        background-color: #006db3;
-        box-shadow: 0 6px 20px rgba(0, 109, 179, 0.4);
-      }
-      body {
-        font-family: "Segoe UI", sans-serif;
-        background: #0b0f1a;
-        color: #f1f1f1;
-        margin: 0;
-        padding: 40px;
-        text-align: center;
-      }
-
-      h1 {
-        font-size: 2.5em;
-        color: #00ffff;
-        margin-bottom: 10px;
-      }
-
-      p.sub {
-        font-style: italic;
-        color: #ccc;
-        margin-bottom: 50px;
-      }
-
-      .plans {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        max-width: 1000px;
-        margin: auto;
-      }
-
-      .plan {
-        background: #111827;
-        padding: 30px;
-        border-radius: 20px;
-        border: 1px solid #1f2937;
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.05);
-        transition: transform 0.2s;
-      }
-
-      .plan:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-      }
-
-      .plan h2 {
-        margin-top: 0;
-        color: #00ffff;
-      }
-
-      .price {
-        font-size: 2em;
-        margin: 10px 0 20px;
-        color: #ffffff;
-      }
-
-      .features {
-        text-align: left;
-        margin-top: 20px;
-        font-size: 0.95em;
-      }
-
-      .features li {
-        margin-bottom: 10px;
-      }
-
-      .buy-button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #00ffff;
-        border: none;
-        border-radius: 8px;
-        color: #0b0f1a;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-
-      .buy-button:hover {
-        background: #00dddd;
-      }
-
-      .popup {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(10, 10, 20, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-        display: none;
-      }
-
-      .popup-content {
-        background: #111827;
-        padding: 30px;
-        border-radius: 20px;
-        text-align: center;
-        max-width: 300px;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-      }
-
-      .spinner {
-        border: 4px solid #0b0f1a;
-        border-top: 4px solid #00ffff;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        margin: 20px auto;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      .popup-content button {
-        margin-top: 15px;
-        padding: 8px 15px;
-        border: none;
-        background: #00ffff;
-        color: #000;
-        border-radius: 6px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="index.html" class="back-btn" style="margin-top: 40px"
-      >← Back to Home</a
-    >
-
+  <header>
     <h1>💸 Virelli Plans</h1>
-    <p class="sub">Choose your illusion of power.</p>
+    <p class="tagline">Choose your illusion of power.</p>
+  </header>
 
-    <div class="plans">
-      <div class="plan">
-        <h2>Basic</h2>
-        <div class="price">$0.00/mo</div>
-        <ul class="features">
-          <li>• Access to nothing</li>
-          <li>• Occasional good vibes</li>
-          <li>• A button that does nothing</li>
-        </ul>
-        <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
-      </div>
+  <main class="plans">
+    <section class="plan">
+      <h2>Basic</h2>
+      <p class="price">$0.00 / mo</p>
+      <ul class="features">
+        <li>Access to nothing</li>
+        <li>Occasional good vibes</li>
+        <li>A button that does nothing</li>
+      </ul>
+      <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
+    </section>
 
-      <div class="plan">
-        <h2>Pro</h2>
-        <div class="price">$0.00/mo</div>
-        <ul class="features">
-          <li>• Everything in Basic</li>
-          <li>• Slightly bolder font</li>
-          <li>• Priority access to disappointment</li>
-        </ul>
-        <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
-      </div>
+    <section class="plan">
+      <h2>Pro</h2>
+      <p class="price">$0.00 / mo</p>
+      <ul class="features">
+        <li>Everything in Basic</li>
+        <li>Slightly bolder font</li>
+        <li>Priority access to disappointment</li>
+      </ul>
+      <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
+    </section>
 
-      <div class="plan">
-        <h2>Studio</h2>
-        <div class="price">$0.00/mo</div>
-        <ul class="features">
-          <li>• All Pro features</li>
-          <li>• Ability to say “I'm in Studio tier”</li>
-          <li>• Invisible upgrade aura</li>
-        </ul>
-        <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
-      </div>
+    <section class="plan">
+      <h2>Studio</h2>
+      <p class="price">$0.00 / mo</p>
+      <ul class="features">
+        <li>All Pro features</li>
+        <li>Ability to say “I'm in Studio tier”</li>
+        <li>Invisible upgrade aura</li>
+      </ul>
+      <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
+    </section>
 
-      <div class="plan">
-        <h2>Enterprise</h2>
-        <div class="price">$0.00/mo</div>
-        <ul class="features">
-          <li>• Executive-level nothing</li>
-          <li>• Meetings with yourself</li>
-          <li>• Free virtual high-five</li>
-        </ul>
-        <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
-      </div>
+    <section class="plan">
+      <h2>Enterprise</h2>
+      <p class="price">$0.00 / mo</p>
+      <ul class="features">
+        <li>Executive-level nothing</li>
+        <li>Meetings with yourself</li>
+        <li>Free virtual high-five</li>
+      </ul>
+      <button class="buy-button" onclick="fakePurchase()">Buy Now</button>
+    </section>
+  </main>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content" id="popup-content">
+      <div class="spinner"></div>
+      <p>Processing fake payment...</p>
     </div>
+  </div>
 
-    <!-- Popup -->
-    <div id="popup" class="popup">
-      <div class="popup-content" id="popup-content">
-        <div class="spinner"></div>
-        <p>Processing fake payment...</p>
-      </div>
-    </div>
+  <script>
+    function fakePurchase() {
+      const popup = document.getElementById("popup");
+      const content = document.getElementById("popup-content");
 
-    <script>
-      function fakePurchase() {
-        const popup = document.getElementById("popup");
-        const content = document.getElementById("popup-content");
-
-        popup.style.display = "flex";
-        content.innerHTML = `
+      popup.style.display = "flex";
+      content.innerHTML = `
         <div class="spinner"></div>
         <p>Processing fake payment...</p>
       `;
 
-        setTimeout(() => {
-          content.innerHTML = `
+      setTimeout(() => {
+        content.innerHTML = `
           <h2>✅ Thank you!</h2>
           <p>You’ve successfully bought absolutely nothing.</p>
-          <button onclick="closePopup()">close</button>
+          <button onclick="closePopup()">Close</button>
         `;
-        }, 2500);
-      }
+      }, 2500);
+    }
 
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
-    </script>
-  </body>
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
 </html>

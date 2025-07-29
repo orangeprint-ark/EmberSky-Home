@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>🔥 All Projects – Virelli</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="ProjectAssets/favicon.svg" type="image/svg+xml" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-<h1 style="background: linear-gradient(90deg, #00c6ff, #0072ff); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700;"></h1>
-        All Projects
-      </h1>
-      <p class="tagline" style="color:#0072ff;">
-        Explore every creation in the Virelli.
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🔥 All Projects – Virelli</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="ProjectAssets/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+  </nav>
 
-    <main class="projectGrid">
-      <div class="project" style="max-width: 360px; margin: 0 auto; user-select: none;">
-        <h3 style="color:#00c6ff;">Orange Cutter</h3>
-        <p>Slice the falling oranges! Swipe or drag your mouse/finger to cut.</p>
-        <canvas id="orangeCutter" width="320" height="480" style="border: 2px solid #00c6ff; border-radius: 16px; background: #f0f9ff; display: block; margin: 0 auto;"></canvas>
-        <p id="score" style="font-weight: 700; color: #0072ff; font-size: 1.2rem; margin-top: 10px; text-align: center;">Score: 0</p>
-      </div>
-      <div class="project" style="max-width: 360px; margin: 0 auto; user-select: none;">
-        <h3 style="color:#00c6ff;">Windows 10</h3>
-        <p>Got tired , and lazy abandoning it i guess.</p>
-        <img src="ProjectAssets/win10.png" alt="Windows 10 Simulator" style="width: 100%; border-radius: 16px; border: 2px solid #00c6ff; background: #f0f9ff;" />
-        <a href="win10"><button class="donate-btn">Launch</button></a>
-      </div>
-      <div class="project" style="max-width: 360px; margin: 0 auto; user-select: none;">
-        <h3 style="color:#00c6ff;">EmberWord</h3>
-        <p></p>
-        <img src="ProjectAssets/675962FA-71B7-4909-855F-A6279DE4156F.png" alt="EmberDocs" style="width: 100%; border-radius: 16px; border: 2px solid #00c6ff; background: #f0f9ff;" />
-        <a href="docs"><button class="donate-btn">Launch</button></a>
-    </main>
+  <header>
+    <h1>🔥 All Projects</h1>
+    <p class="tagline">Explore every creation in the Virelli.</p>
+  </header>
 
-    <a href="index.html" class="back-btn" style="background-color: #0072ff;">Back</a>
+  <main class="projectGrid">
+    <!-- Project card example -->
+    <article class="project">
+      <h3>🍊 Orange Cutter</h3>
+      <p>Slice the falling oranges! Swipe or drag your mouse/finger to cut.</p>
+      <canvas id="orangeCutter" width="320" height="480" class="project-canvas"></canvas>
+      <p id="score" class="score">Score: 0</p>
+      <a href="#" class="donate-btn" aria-label="Launch Orange Cutter">Launch</a>
+    </article>
 
-    <script src="scripts/orangeCutter.js"></script>
-    </script>
-  </body>
+    <article class="project">
+      <h3>🪟 Windows 10</h3>
+      <p>Got tired, lazy, abandoning it I guess.</p>
+      <img src="ProjectAssets/win10.png" alt="Windows 10 Simulator" class="project-img" />
+      <a href="win10" class="donate-btn" aria-label="Launch Windows 10 Simulator">Launch</a>
+    </article>
+
+    <article class="project">
+      <h3>🔥 EmberWord</h3>
+      <p>Text editor & docs platform prototype.</p>
+      <img src="ProjectAssets/675962FA-71B7-4909-855F-A6279DE4156F.png" alt="EmberDocs" class="project-img" />
+      <a href="docs" class="donate-btn" aria-label="Launch EmberWord">Launch</a>
+    </article>
+  </main>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <script src="scripts/orangeCutter.js"></script>
+</body>
 </html>
