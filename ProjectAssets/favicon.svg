@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078D7"/>
+      <stop offset="50%" stop-color="#004E8C"/>
+      <stop offset="100%" stop-color="#001F3F"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#185ABC"/>
+    </linearGradient>
+    <linearGradient id="firefox" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#002147"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M20,20 L50,80 L80,20 L70,20 L50,60 L30,20 Z" fill="url(#edge)"/>
+  <path d="M26,20 L50,74 L74,20 L66,20 L50,56 L34,20 Z" fill="url(#chrome)" opacity="0.6"/>
+  <path d="M32,20 L50,68 L68,20 L62,20 L50,52 L38,20 Z" fill="url(#firefox)" opacity="0.4"/>
+</svg>
